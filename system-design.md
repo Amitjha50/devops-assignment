@@ -1,0 +1,5 @@
+- Docker used for containerization
+- Nginx as reverse proxy
+- Restart policy for high availability
+- Can be deployed on Kubernetes
+- Redis caching can be added
