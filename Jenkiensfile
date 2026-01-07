@@ -2,15 +2,21 @@ pipeline {
   agent any
 
   stages {
+    stage('Checkout') {
+      steps {
+        git 'https://github.com/your-username/devops-assignment.git'
+      }
+    }
+
     stage('Build') {
       steps {
-        echo 'Build containers'
+        sh 'docker-compose build'
       }
     }
 
     stage('Deploy') {
       steps {
-        echo 'Deploy using Docker Compose'
+        sh 'docker-compose up -d'
       }
     }
   }
